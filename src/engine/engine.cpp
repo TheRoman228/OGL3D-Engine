@@ -43,6 +43,21 @@ void WndResize(int x,int y)
 	glFrustum(-k*sz,k*sz,-sz,sz,sz*2,1000);
 }
 
+void DrawPolygon(float x,float y,float z,float sx,float sy,float sz)
+{
+	glScalef(sx,sy,sz);
+	glTranslatef(x,y,z);
+    glBegin(GL_TRIANGLES);
+        glColor3f(1,0,0); glVertex3f(1.0f,1.0f,0.0f);
+        glColor3f(1,0,0); glVertex3f(0.0f,1.0f,0.0f);
+        glColor3f(1,0,0); glVertex3f(0.0f,0.0f,0.0f);
+        glColor3f(0,0,1); glVertex3f(0.0f,0.0f,0.0f);
+        glColor3f(0,0,1); glVertex3f(1.0f,0.0f,0.0f);
+        glColor3f(0,0,1); glVertex3f(1.0f,1.0f,0.0f);
+    glEnd();
+	
+}
+
 void print_string(float x, float y, char *text, float r, float g, float b)
 {
   static char buffer[99999]; // ~500 chars
