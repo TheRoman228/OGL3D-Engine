@@ -11,3 +11,4 @@ type pacman -S gcc
 then in directory with engine
 type make
 engine will build and thats all
+dont forget to make "build" folder where src and obj folder
