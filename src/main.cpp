@@ -5,14 +5,13 @@ GameObject polygon;
 GameObject cameraa;
 struct Camera camera;
 // Use for initializion
-
+NN ai;
 int blank[16] = {0, 0,0,0, 1,5,1, 0,
 				 0, 0,0,0, 5,5,1, 0}; // its not working cuz i dont implement this
 
 void drawPlayer()
 {
 	camera = getMainCamera();
-	std::cout << camera.x << std::endl;
 	DrawPolygon(camera.x,camera.y/2,camera.z-0.5f,1,0.5,1);
 }
 
@@ -22,6 +21,8 @@ void Start()
 	polygon.sx= 1;polygon.sy = 1;polygon.sz = 0;
 	cameraa.x = camera.x; cameraa.y = camera.y; cameraa.z = camera.z;
 	cameraa.sx = 1; cameraa.sy = 1; cameraa.sz = 1;
+	ai.calculate(cameraa.x,cameraa.y,cameraa.z);
+	std::cout << "x:" << ai.o1 << "y:" << ai.o2 << "z:" << ai.o3 << "sx:" << ai.o4 << "sy:" << ai.o5 << "sz:" << ai.o6 << std::endl;
 }
 
 void drawline(int x, int y, int x1, int y1)
@@ -56,5 +57,7 @@ void renderText(char *text, float x, float y)
 // Use for update
 void Update()
 {
+	ai.calculate(cameraa.x,cameraa.y,cameraa.z);
+	std::cout << "x:" << ai.o1 << "y:" << ai.o2 << "z:" << ai.o3 << "sx:" << ai.o4 << "sy:" << ai.o5 << "sz:" << ai.o6 << std::endl;
 	drawPlayer();
 }

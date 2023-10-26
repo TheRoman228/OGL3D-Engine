@@ -1,6 +1,6 @@
 #include "camera.h"
 
-struct Camera cam = {0,0,1.7f,0,0};
+struct Camera cam = {5,5,1.7f,0,0};
 
 Camera getMainCam()
 {
