@@ -1,5 +1,3 @@
-all: ogl3d.exe
-
 VERSION = 1.0
 GAME = 0
 TARGET = ogl3d.exe
