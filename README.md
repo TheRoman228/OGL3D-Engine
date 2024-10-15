@@ -1,14 +1,10 @@
 # OGL3D-Engine
 
-this is my own game engine
+This is my own game engine. It was made entirely by me for making games, it was abandoned since 2023 because it implementation of functions was very slow, if you want to use it, dont forget to credit me.
 
 # How to build
 
-download msys2 then
-in msys2 enter directory with engine
-type pacman -S make
-type pacman -S gcc
-then in directory with engine
-type make
-engine will build and thats all
-dont forget to make "build" folder where src and obj folder
+Firstly, install MSYS2,
+Then open it and write command "pacman -S make gcc".
+When its done, enter the project directory and write command "make", if everything works, you should get an executable in the folder,
+if not, write issue in github in this repository.
